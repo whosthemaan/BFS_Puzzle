@@ -1,3 +1,5 @@
+## BFS Puzzle
+
 1. We can run the code by Executing the main.py using the following command, no external libraries were used:
 
 **python3 main.py**
