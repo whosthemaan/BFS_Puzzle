@@ -1,5 +1,26 @@
-initial_state = [2,8,3,1,6,4,7,0,5]
-goal_state = [1,2,3,8,0,4,7,6,5]
+# test case 1
+
+start_state = [1,6,7], [2,0,5], [4,3,8]
+goal_status = [1,4,7], [2,5,8], [3,0,6]
+
+# test case 2
+
+# start_state = [4,7,8], [2,1,5], [3,6,0]
+# goal_status = [1,4,7], [2,5,8], [3,6,0]
+
+def convert_to_required(start_state, goal_status):
+    initial_state = []
+    goal_state = []
+
+    for i in range(3):
+        for j in range(3):
+            initial_state.append(start_state[j][i])
+
+    for i in range(3):
+        for j in range(3):
+            goal_state.append(goal_status[j][i])
+
+    return initial_state, goal_state            
 
 def write_nodes(path, Node_State_i, NodesInfo):
     file =  open("nodePath.txt", "w+")
@@ -147,6 +168,7 @@ def find_possible_states(initial_state, goal_state):
 
     return Node_State_i, nodes_info
 
+initial_state, goal_state = convert_to_required(start_state, goal_status)
 Node_State_i, nodes_info = find_possible_states(initial_state, goal_state)
 path = generate_path(Node_State_i, nodes_info)
 write_nodes(path, Node_State_i, nodes_info)

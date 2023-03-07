@@ -2,7 +2,7 @@
 
 **python3 main.py**
 
-2. In the beginning of the code, there are two state variables defined as inital_state and goal_state, you can modify this as per your need. Only valid inputs will work.
+2. Uncomment the different **start_state** and **goal_status** to test the two test cases and you may add more but with the same variable name
 
 3. You can access all the nodes generated in the three txt files:
 
